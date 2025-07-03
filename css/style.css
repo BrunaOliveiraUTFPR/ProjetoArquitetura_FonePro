@@ -1,0 +1,484 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #121212;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8em 2em;
+    flex-wrap: wrap;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+    .logo-container h1 {
+        font-size: 1.5em;
+    }
+
+    .logo-container img {
+        height: 50px;
+        width: auto;
+    }
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 1em;
+}
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s ease, color 0.3s ease;
+            display: inline-block;
+        }
+
+            nav ul li a:hover {
+                transform: translateY(-4px);
+                color: #7FDEFF;
+            }
+
+            nav ul li a.active {
+                border-bottom: 2px solid #7FDEFF;
+                padding-bottom: 4px;
+                color: #7FDEFF;
+            }
+
+.container {
+    padding: 2em;
+    text-align: center;
+}
+
+.img-arredondada {
+    border-radius: 12px;
+    width: 60%;
+    max-width: 400px;
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #121212;
+    color: white;
+    padding: 2em 1em;
+    font-size: 0.9em;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-contato, .footer-redes, .footer-copy {
+    margin: 10px;
+}
+
+    .footer-redes a {
+        color: white;
+        margin-right: 10px;
+        font-size: 1.3em;
+        transition: color 0.3s;
+    }
+
+        .footer-redes a:hover {
+            color: #007bff;
+        }
+
+.footer-copy {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .img-arredondada {
+        width: 90%;
+    }
+}
+
+/* GALERIA PRODUTOS */
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 2em;
+    padding: 0 2em;
+}
+
+.produto {
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .produto:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .produto img {
+        width: 100%;
+        border-radius: 12px;
+        margin-bottom: 10px;
+    }
+
+    .produto h3 {
+        font-size: 1.1em;
+        margin: 10px 0 5px;
+    }
+
+    .produto p {
+        font-size: 0.95em;
+        color: #101820;
+    }
+
+/* HERO */
+
+.hero {
+    background-image: url('../imagens/FoneBanner.png');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+    .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    padding: 20px;
+}
+
+    .hero-content h2 {
+        font-size: 2.5em;
+        margin-bottom: 0.5em;
+    }
+
+    .hero-content p {
+        font-size: 1.2em;
+        margin-bottom: 1em;
+    }
+
+.botao {
+    background-color: #7FDEFF;
+    color: black;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+    .botao:hover {
+        background-color: #0056b3;
+    }
+
+/* QUEM SOMOS */
+
+.quemsomos-topo {
+    text-align: center;
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 0 1em;
+    font-size: 1.1em;   
+}
+
+.quemsomos-blocos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 700px;
+    margin: 2em auto;
+    padding: 0 1em;
+}
+
+.quemsomos-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1.5em;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #121212;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.2)
+}
+
+    .quemsomos-box:hover {
+        transform: translateY(-5px);
+    }
+
+    .quemsomos-box h3 {
+        margin-bottom: 0.5em;
+    }
+
+    .quemsomos-box ul {
+        list-style: none;
+        padding-left: 0;
+        margin-top: 1em;
+        text-align: left;
+    }
+
+    .quemsomos-box li {
+        margin: 0.5em 0;
+        text-align: center;
+    }
+
+.quemsomos-contato {
+    text-align: center;
+    max-width: 600px;
+    margin: 3em auto;
+    padding: 1em;
+}
+
+    .quemsomos-contato i {
+        margin-right: 8px;
+        color: #007bff;
+    }
+
+    .quemsomos-contato a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+        .quemsomos-contato a:hover {
+            text-decoration: underline;
+        }
+
+body.fundo-roxo {
+    background: url('../imagens/fundo-roxo.png') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+    body.fundo-roxo main {
+        background-color: #f9f9f9;
+        color: #121212;
+        padding: 2em;
+        border-radius: 12px;
+        max-width: 1000px;
+        margin: 2em auto;
+        box-shadow: 0 0 30px rgba(0,0,0,0.3);
+    }
+
+/* TRABALHE CONOSCO */
+
+.trabalhe {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2em;
+    text-align: center;
+}
+
+.blocos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.bloco {
+    flex: 1 1 300px;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 1.5em;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+    .bloco h3 {
+        margin-bottom: 1em;
+        text-align: center;
+    }
+
+    .bloco ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .bloco li {
+        margin: 0.5em 0;
+    }
+
+.formulario {
+    margin-top: 3em;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 2em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+    .formulario h3 {
+        margin-bottom: 1em;
+        font-size: 1.3em;
+    }
+
+    .formulario p {
+        font-size: 1.1em;
+        color: #121212;
+        font-weight: 500;
+    }
+
+
+/*TECNOLOGIA*/
+
+.tech-intro {
+    text-align: center;
+    padding: 3em 1em 2em;
+    background: linear-gradient(to right, #101820, #1f1f2e);
+    color: white;
+}
+
+    .tech-intro h2 {
+        font-size: 2.3em;
+        margin-bottom: 0.5em;
+    }
+
+    .tech-intro p {
+        font-size: 1.1em;
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+
+.tech-blocos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 3em 2em;
+    background-color: #f0f0f5;
+}
+
+.tech-box {
+    background-color: white;
+    border-left: 5px solid #007bff;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+    transition: transform 0.3s ease;
+}
+
+    .tech-box:hover {
+        transform: translateY(-5px);
+    }
+
+    .tech-box h3 {
+        color: #121212;
+        font-size: 1.4em;
+        margin-bottom: 0.5em;
+    }
+
+    .tech-box p {
+        color: #444;
+        font-size: 1em;
+        line-height: 1.5;
+    }
+
+/* Estilo CARD - TECNOLOGIA */
+.box-click {
+    cursor: pointer;
+    display: block;
+}
+
+.modal-toggle {
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.modal-content {
+    background: white;
+    padding: 2em;
+    max-width: 500px;
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    position: relative;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #333;
+}
+
+.modal-toggle:checked + .modal {
+    display: flex;
+}
+
+
