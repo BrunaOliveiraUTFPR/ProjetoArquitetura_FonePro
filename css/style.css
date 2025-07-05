@@ -5,19 +5,19 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Raleway';
     line-height: 1.6;
     background-color: #f9f9f9;
     color: #333;
 }
 
 header {
-    background-color: #121212;
-    color: white;
+    background-color: #ffffff;
+    color: rgb(66, 1, 141);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.8em 2em;
+    padding: 0.1em 1em;
     flex-wrap: wrap;
 }
 
@@ -26,7 +26,7 @@ header {
     align-items: center;
     gap: 10px;
     text-decoration: none;
-    color: white;
+    color: rgb(66, 1, 141);
 }
 
     .logo-container h1 {
@@ -50,7 +50,7 @@ nav ul {
     }
 
         nav ul li a {
-            color: white;
+            color:rgb(66, 1, 141);
             text-decoration: none;
             font-weight: bold;
             transition: transform 0.3s ease, color 0.3s ease;
@@ -59,13 +59,13 @@ nav ul {
 
             nav ul li a:hover {
                 transform: translateY(-4px);
-                color: #7FDEFF;
+                color: #005470;
             }
 
             nav ul li a.active {
-                border-bottom: 2px solid #7FDEFF;
+                border-bottom: 2px solid#005470;
                 padding-bottom: 4px;
-                color: #7FDEFF;
+                color: #005470;
             }
 
 .container {
@@ -81,9 +81,9 @@ nav ul {
 }
 
 footer {
-    background-color: #121212;
-    color: white;
-    padding: 2em 1em;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 1em 1em;
     font-size: 0.9em;
 }
 
@@ -101,7 +101,7 @@ footer {
 }
 
     .footer-redes a {
-        color: white;
+        color: rgb(0, 0, 0);
         margin-right: 10px;
         font-size: 1.3em;
         transition: color 0.3s;
@@ -139,18 +139,18 @@ footer {
 
 .produto {
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
     .produto:hover {
         transform: translateY(-5px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 15px 50px rgba(0.1, 0, 0, 0.1);
     }
 
     .produto img {
         width: 100%;
-        border-radius: 12px;
-        margin-bottom: 10px;
+        border-radius: 6px;
+        margin-bottom: 15px;
     }
 
     .produto h3 {
@@ -209,15 +209,15 @@ footer {
 .botao {
     background-color: #7FDEFF;
     color: black;
-    padding: 10px 25px;
+    padding: 15px 25px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 30px;
     font-weight: bold;
     transition: background-color 0.3s;
 }
 
     .botao:hover {
-        background-color: #0056b3;
+        background-color: #a36aff;
     }
 
 /* QUEM SOMOS */
@@ -242,11 +242,11 @@ footer {
 .quemsomos-box {
     background-color: rgba(255, 255, 255, 0.1);
     padding: 1.5em;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
     text-align: center;
     color: #121212;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
     border: 1px solid rgba(255,255,255,0.2)
 }
 
@@ -301,7 +301,7 @@ body.fundo-roxo {
         background-color: #f9f9f9;
         color: #121212;
         padding: 2em;
-        border-radius: 12px;
+        border-radius: 6px;
         max-width: 1000px;
         margin: 2em auto;
         box-shadow: 0 0 30px rgba(0,0,0,0.3);
@@ -403,7 +403,7 @@ body.fundo-roxo {
     padding: 2em;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.07);
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 }
 
     .tech-box:hover {
@@ -481,4 +481,150 @@ body.fundo-roxo {
     display: flex;
 }
 
+/* ESTILO DA PAGINA PRODUTO */
 
+body.popup {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.produto-popup {
+    background: white;
+    border-radius: 12px;
+    padding: 2em;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.4);
+    text-align: center;
+    position: relative;
+}
+
+/* Btn fecha */
+#fechar-popup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+
+#icone-carrinho {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 1.8em;
+    cursor: pointer;
+    color: white;
+    background-color: #121212;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 1000;
+}
+
+#carrinho-popup {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    padding: 1em;
+    display: none;
+    width: 250px;
+    z-index: 999;
+}
+
+#carrinho-popup h3 {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#carrinho-popup ul {
+    list-style: none;
+    padding: 0;
+    font-size: 0.95em;
+}
+
+.produto-popup h2 {
+    margin-bottom: 0.5em;
+}
+
+#mensagem-carrinho {
+    margin-top: 1em;
+    font-weight: bold;
+    color: green;
+}
+
+/* PAGINA CARRINHO */
+
+#carrinho-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.carrinho-item {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+}
+
+.carrinho-item button {
+  background-color: #ff4d4d;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#concluir-compra-btn {
+  margin: 40px auto;
+  display: block;
+  background-color: #007bcc;
+  color: white;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#valor-total {
+  margin: 40px auto;
+  display: center;
+  background-color: #d8d8d8;
+  color: #0037af;
+  font-weight: bold;
+  padding: 30px 90px;
+  border: none;
+}
+
+#ordenar {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #c7c7c7;
+  font-weight: bold;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 12px;
+  font-family: 'Raleway';
+}
